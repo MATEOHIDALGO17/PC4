@@ -1,0 +1,42 @@
+---
+title: "SEMANA_8"
+author: "MATEO_HIDALGO"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+#LIMPIAR DATA
+
+```{r}
+data_limpia <- data[!is.na(data$IgG),]
+```
+
+#INSTALAR PAQUETE
+
+```{r}
+install.packages("fdth")
+
+library(fdth)
+```
+
+#CREAR HISTOGRAMA: #SELECCIONAMOS LA COLUMNA A TRABAJAR
+
+```{r}
+apertura <- data$Edad
+
+head(apertura)
+```
+
+#REALIZAMOS EL GRAFICO HISTOGRAMA
+
+```{r}
+hist(apertura)
+```
